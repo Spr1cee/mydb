@@ -1,6 +1,8 @@
 package ua.com.mydb.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ManyToAny;
 
 @Setter
 @Getter
@@ -8,13 +10,23 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 
+@Entity
+@Table(name = "bus")
 public class Bus {
 
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
         private String name;
         private String description;
 
-        private Route route;
+        @ManyToOne
+        @JoinColumn(name = "route_id")
+        private Route routes;
+
+        @OneToMany(mappedBy = "bus_id")
+        private Interval intervals;
+
 
        /* public Bus() {
         }

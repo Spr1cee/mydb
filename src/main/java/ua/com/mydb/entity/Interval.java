@@ -1,6 +1,9 @@
 package ua.com.mydb.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Setter
 @Getter
@@ -8,14 +11,20 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 
+@Entity
+@Table(name = "interval")
 public class Interval {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
         private double time;
 
-        private Route route;
+    @ManyToOne
+    @JoinColumn(name = "interval_id")
+    private List<Bus> buses;
 
-  /*      public Interval() {
+    /*      public Interval() {
         }
 
         public Interval(long id, double time) {

@@ -1,5 +1,6 @@
 package ua.com.mydb.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -10,18 +11,23 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
+
+@Entity
+@Table(name = "route")
 public class Route {
 
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
         private String name;
 
-        private Bus bus;
 
-        //private Interval interval;
-
-        private List<Bus> busList;
-
+        @ManyToOne
+        @JoinColumn(name = "user_id")
         private User user;
+
+        @OneToMany(mappedBy = "route_id")
+        private List<Bus> buses;
 
      /*   public Route() {
         }

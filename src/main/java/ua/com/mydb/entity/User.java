@@ -1,5 +1,6 @@
 package ua.com.mydb.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -10,11 +11,16 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
+@Entity
+@Table(name = "user")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private List<Route> routeList;
+    @OneToMany(mappedBy = "user_id")
+    private List<Route> routes;
 
     /*public class Main {
 

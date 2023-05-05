@@ -21,14 +21,12 @@ public class Route {
         private long id;
         private String name;
 
-
-        @ManyToOne
-        @JoinColumn(name = "user_id")
-        private User user;
-
         @OneToMany(mappedBy = "route_id")
         private List<Bus> buses;
 
+        @ManyToOne
+        @JoinColumn(name = "user_id")
+        private User users;
      /*   public Route() {
         }
 

@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ManyToAny;
 
+import java.util.List;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -20,12 +22,14 @@ public class Bus {
         private String name;
         private String description;
 
-        @ManyToOne
-        @JoinColumn(name = "route_id")
-        private Route routes;
-
         @OneToMany(mappedBy = "bus_id")
-        private Interval intervals;
+        private List<Route> routes;
+
+        @ManyToOne
+        @JoinColumn(name = "interval_id")
+        private Interval interval;
+
+
 
 
        /* public Bus() {

@@ -25,8 +25,8 @@ public class Route {
         private List<Bus> buses;
 
         @ManyToOne
-        @JoinColumn(name = "user_id")
-        private User users;
+        @JoinColumn(name = "bus_id")
+        private Bus bus;
      /*   public Route() {
         }
 

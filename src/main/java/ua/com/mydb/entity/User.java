@@ -22,6 +22,10 @@ public class User {
     @OneToMany(mappedBy = "user_id")
     private List<Route> routes;
 
+//    @ManyToOne
+//    @JoinColumn(name = "route")
+//    private Route route;
+
     /*public class Main {
 
         public static void main(String[] args) {

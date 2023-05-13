@@ -13,6 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "interval")
+
 public class Interval {
 
     @Id
@@ -20,10 +21,12 @@ public class Interval {
         private long id;
         private double time;
 
-    @ManyToOne
-    @JoinColumn(name = "interval_id")
+    @OneToMany(mappedBy = "interval_id")
     private List<Bus> buses;
 
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    private User user;
     /*      public Interval() {
         }
 

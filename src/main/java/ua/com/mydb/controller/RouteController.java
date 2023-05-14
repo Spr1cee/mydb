@@ -19,12 +19,13 @@ public class RouteController {
         this.routeService = routeService;
     }
 
-    @GetMapping("/routes")
-    public String getPageHome(Model model){
+    @GetMapping("routes.ftl")
+    public String getPageRoute(Model model){
 
       List<Route> routeList = routeService.getAllRoute();
-   //   model.addAtribute("allRoute", routeList);
+      model.addAttribute("allRoute", routeList);
 
         return "route";
     }
 }
+

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Міський транспорт</title>
-  <link rel="stylesheet" href="../css/my.css">
+  <link rel="stylesheet" href="css/my.css">
 
 </head>
 <body>
@@ -21,7 +21,7 @@
     <!-- Список з пунктами меню -->
     <div class="menu-list">
       <a href="routes.html">Маршрути</a>
-      <a href="interval.html">Розклад</a>
+      <a href="interval.ftl">Розклад</a>
       <a href="index.html">Карта</a>
     </div>
 

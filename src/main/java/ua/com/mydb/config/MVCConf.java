@@ -11,3 +11,4 @@ public class MVCConf implements WebMvcConfigurer {
         reg.addResourceHandler("/static/**").addResourceLocations("classpath:/static");
     }
 }
+

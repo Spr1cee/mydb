@@ -23,7 +23,7 @@
 
 <div class="row">
     <div class="col">
-        <#include "../parts/footer.ftl">
+        <#include "../footer.ftl">
     </div>
 </div>
 </div>

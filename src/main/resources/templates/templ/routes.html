@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Міський транспорт</title>
-    <link rel="stylesheet" href="../css/my.css">
+    <link rel="stylesheet" href="css/my.css">
 
 </head>
 <body>
@@ -20,8 +20,8 @@
 
         <!-- Список з пунктами меню -->
         <div class="menu-list">
-            <a href="routes.html">Маршрути</a>
-            <a href="interval.html">Розклад</a>
+            <a href="routes.ftl">Маршрути</a>
+            <a href="interval.ftl">Розклад</a>
             <a href="index.html">Карта</a>
         </div>
 
@@ -30,20 +30,37 @@
 
 
 <!-- Main section -->
-<div class="image-container">
+<div class="container-fluid">
   <div class="row">
 
-
-        <div id="main-section">
-          <img id="map" src="../../../images/map.jpg">
-        </div>
-        <div id="button-section">
+      <div id="main-section">
+          <img id="map" src="../../images/map.jpg">
+      </div>
+      <div id="button-section">
           <button id="22">22</button>
           <button id="45">45</button>
           <button id="91">91</button>
-        </div>
-        <script type="text/javascript" src="code.js"></script>
+      </div>
+      <script type="text/javascript" src="code.js"></script>
 
+      <div class="row row-cols-2 row-cols-md-2 g-4"
+
+      <#if allRoute??>
+<#list allRoute as Route>
+
+    <div class="col">
+        <div class="card">
+            <a href="/route/${route.id}">
+            <img src="${route.images}" class="card-ing-top" alt="${route.name}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">${route.name}</h5>
+                <p class="card-text">${route.id}</p>
+            </div>
+        </div>
+</#list>
+      </#if>
+  </div>
 
   </div>
 </div>

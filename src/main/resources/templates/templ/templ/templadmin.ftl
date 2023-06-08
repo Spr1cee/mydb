@@ -9,7 +9,7 @@
     </head>
     <body>
 
-    <#include "nav.ftl">
+    <#include "navbar.ftl">
 
     <div class="container-fluid">
 

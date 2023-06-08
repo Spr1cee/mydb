@@ -26,8 +26,12 @@ public class BusService {
         return busRepository.findAllByRoutes(route);
     }
 
-    @Cacheable(cacheNames = "Busesbycategory", key = "#pageable.pageNumber")
+    @Cacheable(cacheNames = "Busesbyroute", key = "#pageable.pageNumber")
     public Page<Bus> getPageBusByRoute(Route route, Pageable pageable){
         return busRepository.findAllByRoutes(pageable, route);
+    }
+
+    public List<Bus> getBusByRoute(Route route) {
+        return null;
     }
 }

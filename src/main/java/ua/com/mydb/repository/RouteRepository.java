@@ -6,9 +6,10 @@ import ua.com.mydb.entity.Route;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import ua.com.mydb.service.RouteService;
 
 @Repository
 public interface RouteRepository extends JpaRepository<Route, Long > {
-    static Page<Route> findAll(Pageable pageable);
+    Page<Route> findAll(Pageable pageable);
 
 }

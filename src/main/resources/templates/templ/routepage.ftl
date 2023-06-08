@@ -6,9 +6,5 @@
 </head>
 <body>
 
-<h1>${hello}</h1>
-<a href="/route">go to route</a>
-
-
 </body>
 </html>

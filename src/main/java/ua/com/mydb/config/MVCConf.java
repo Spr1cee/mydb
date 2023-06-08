@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MVCConf implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry reg) {
-        reg.addResourceHandler("/static/**").addResourceLocations("classpath:/static");
+        reg.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
 }
 

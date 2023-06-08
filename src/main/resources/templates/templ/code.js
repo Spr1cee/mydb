@@ -16,26 +16,3 @@ button3.addEventListener("click", function(){
 });
 
 
-let selectedRoute;
-
-document.getElementById("22").addEventListener("click", function() {
-    selectedRoute = "route22";
-});
-
-document.getElementById("45").addEventListener("click", function() {
-    selectedRoute = "route45";
-});
-
-document.getElementById("91").addEventListener("click", function() {
-    selectedRoute = "route91";
-});
-
-document.getElementById("info").addEventListener("click", function() {
-    if (selectedRoute === "route22") {
-        document.getElementById("bus-image").src = "bus22.jpg";
-    } else if (selectedRoute === "route45") {
-        document.getElementById("bus-image").src = "bus45.jpg";
-    } else if (selectedRoute === "route91") {
-        document.getElementById("bus-image").src = "bus91.jpg";
-    }
-});

@@ -23,8 +23,6 @@
             <a href="routes.html">Маршрути</a>
             <a href="interval.html">Розклад</a>
             <a href="index.html">Карта</a>
-            <a href="home.html" class="button">Реєстрація</a>
-            <a href="macro.html" class="button">Вхід</a>
         </div>
 
     </div>
@@ -34,46 +32,24 @@
 <!-- Main section -->
 <div class="container-fluid">
     <div class="row">
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: sans-serif;
-            }
 
-            #map-container {
-                position: relative;
-                height: 100vh;
-            }
-
-            #map {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80%;
-                height: auto;
-                z-index: 1;
-            }
-
-        </style>
-
-
-        <!-- Карта -->
-        <div id="map-container">
-            <img id="map" src="../../images/map.jpg" alt="Мапа">
+        <div id="main-section">
+            <img id="map" src="../../images/map.jpg">
         </div>
 
+        <div id="button-section">
+            <button id="22">22</button>
+            <button id="45">45</button>
+            <button id="91">91</button>
+            <button id="info">info</button>
 
+        </div>
+        <script type="text/javascript" src="code1.js"></script>
 
-        <!-- Main content -->
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-
-
-        </main>
-
-    </div>
+        </div>
 </div>
+</div>
+
 <!-- Footer -->
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
@@ -84,24 +60,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-
-<script>
-    // Отримуємо кнопку і список з пунктами меню
-    var menuButton = document.querySelector('.menu-button');
-    var menuList = document.querySelector('.menu-list');
-
-    // Обробник події для кнопки меню
-    menuButton.addEventListener('click', function() {
-        // Перевіряємо, чи список з пунктами меню прихований
-        if (menuList.style.display === 'none') {
-            // Якщо так, то робимо його видимим
-            menuList.style.display = 'block';
-        } else {
-            // Якщо ні, то приховуємо його
-            menuList.style.display = 'none';
-        }
-    });
-</script>
 
 </body>
 </html>

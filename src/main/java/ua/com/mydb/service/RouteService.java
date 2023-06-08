@@ -33,7 +33,7 @@ public class RouteService {
 
     @Cacheable(cacheNames = "cate", key = "#pageable.pageNumber")
     public Page<Route> getAllPageRoute(Pageable pageable){
-        return RouteRepository.findAll(pageable);
+        return routeRepository.findAll(pageable);
     }
 
 }

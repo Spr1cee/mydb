@@ -20,8 +20,8 @@
 
         <!-- Список з пунктами меню -->
         <div class="menu-list">
-            <a href="routes.ftl">Маршрути</a>
-            <a href="interval.ftl">Розклад</a>
+            <a href="routes.html">Маршрути</a>
+            <a href="interval.html">Розклад</a>
             <a href="index.html">Карта</a>
         </div>
 
@@ -45,21 +45,21 @@
 
       <div class="row row-cols-2 row-cols-md-2 g-4"
 
-      <#if allRoute??>
-<#list allRoute as Route>
+<!--      <#if allRoute??>-->
+<!--<#list allRoute as Route>-->
 
-    <div class="col">
-        <div class="card">
-            <a href="/route/${route.id}">
-            <img src="${route.images}" class="card-ing-top" alt="${route.name}">
-            </a>
-            <div class="card-body">
-                <h5 class="card-title">${route.name}</h5>
-                <p class="card-text">${route.id}</p>
-            </div>
-        </div>
-</#list>
-      </#if>
+<!--    <div class="col">-->
+<!--        <div class="card">-->
+<!--            <a href="/route/${route.id}">-->
+<!--            <img src="${route.images}" class="card-ing-top" alt="${route.name}">-->
+<!--            </a>-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">${route.name}</h5>-->
+<!--                <p class="card-text">${route.id}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--</#list>-->
+<!--      </#if>-->
   </div>
 
   </div>
